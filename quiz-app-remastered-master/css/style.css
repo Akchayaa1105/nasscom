@@ -1,0 +1,198 @@
+/******* HELPERS *******/
+* .hide, * .hide > * {
+    display: none;
+}
+.pass {
+    background: #4d914c;
+}
+.fail {
+    background: #d15454;
+}
+
+/******* BASE STYLING *******/
+
+* {
+    color: #FEFEFE;
+    font-family: 'Times New Roman', monospace;
+    font-size: 1.25rem; /* Increased base font size */
+}
+button {
+    border-radius: 10px;
+    border: 3px solid transparent;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+button, input[type="submit"] {
+    cursor: pointer;
+}
+
+/******* HEADER *******/
+
+html {
+    background: #000;
+}
+body {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+}
+.title {
+    margin-left: 1rem;
+    font-size: 2rem; /* Increased title size */
+}
+.sub-title {
+    font-size: 1.125rem; /* Increased sub-title size */
+    color: #DDD;
+    margin-left: 1rem;
+}
+
+/******* MAIN CONTENT *******/
+
+.quiz-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    height: 90%;
+}
+.question-wrapper {
+    border-radius: 10px;
+}
+.question {
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 1.25rem; /* Increased question font size */
+}
+.start-quiz {
+    background: rgba(0, 255, 0, 0.5); /* Increased opacity */
+}
+.start-quiz:hover {
+    background: rgba(0, 255, 0, 0.7); /* Increased hover opacity */
+    border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.quit-quiz {
+    background: rgba(255, 0, 0, 0.5); /* Increased opacity */
+}
+.quit-quiz:hover {
+    background: rgba(255, 0, 0, 0.7); /* Increased hover opacity */
+    border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.answer-btn {
+    color: #fefefe;
+    height: auto;
+    cursor: pointer;
+    font-size: 1.25rem; /* Increased answer button font size */
+    background: rgba(0, 0, 0, 0.7); /* Increased opacity */
+    border: 3px solid rgba(255, 255, 255, 0.4); /* Adjusted for visibility */
+}
+.answer-btn:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.answer-btn.selected {
+    background: rgba(255, 255, 255, 0.25); /* Increased opacity */
+    border: 3px solid #71B6E3;
+}
+.answer-btn.selected.pass {
+    background: #4d914c; /* Solid color for pass */
+}
+.answer-btn.selected.fail {
+    background: rgba(255, 0, 0, 0.7); /* Increased opacity */
+    border: 3px solid #71B6E3;
+}
+
+.answer-btn.pass {
+    background: rgba(0, 255, 0, 0.7); /* Increased opacity */
+    border: 3px solid #00FF00;
+}
+
+.submit-btn, .continue-btn, .retry-btn {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: rgba(0, 123, 255, 0.7); /* Increased opacity for submit button */
+    border: 3px solid rgba(255, 255, 255, 0.4); /* Adjusted for visibility */
+    padding: 0.5rem 1rem; /* Consistent padding */
+    font-size: 1.75rem; /* Increased button font size */
+}
+.submit-btn:hover, .continue-btn:hover, .retry-btn:hover {
+    background: rgba(0, 123, 255, 0.9); /* Increased hover opacity */
+}
+
+.continue-btn {
+    background: rgba(247, 230, 116, 0.9); /* Increased opacity */
+}
+
+/******* FOOTER *******/
+
+.progress-bar {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.failures-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.failure {
+    padding: 0.25rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/******* FEEDBACK *******/
+
+.results-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+.quiz-end-score {
+    display: flex;
+    font-size: 2.5rem; /* Increased score font size */
+    text-align: center;
+}
+.quiz-end-feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; /* Increased feedback font size */
+    color: #CCC;
+    width: 90%;
+    margin: 1rem;
+}
+.quiz-end-feedback-p {
+    margin: 1rem;
+}
+.category {
+    display: flex;
+    border-radius: 10px;
+    padding: 0.25rem 1rem;
+    font-size: 1.25rem; /* Increased category font size */
+    background: #d15454;
+    margin: 0.5rem;
+    padding: 0.25rem;
+}
+.quiz-end-categories {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.failures {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
